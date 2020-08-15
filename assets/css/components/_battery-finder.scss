@@ -1,0 +1,57 @@
+.input-field {
+    height: 40px;
+    width: 280px;
+    margin: 20px auto !important;
+    
+    input {
+        border-radius: 5px;
+        height: 100%;
+        width: 100%;
+        padding-left: 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.308);
+    }
+}
+
+.battery-finder {
+    position: relative;
+    overflow: hidden;
+
+    .background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        clip-path: circle(37.7% at 91% 100%);
+        background: setColor(background);
+        height: 100%;
+
+        @include mobile {
+            clip-path: circle(70.9% at 22% 100%);
+        }
+    }
+
+
+    button {
+        width: 280px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.308);
+        background: setColor(primary);
+        color: white;
+        font-weight: 600;
+        transition: .3s ease-out;
+        margin: 20px auto;
+
+        &:hover {
+            background: setColor(color);
+            color: setColor(background);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.carousel-container {
+    height: 350px;
+    background: setColor(primary);
+    color: setColor(color);
+    margin: 40px auto;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        height: 200px;
+    }
+}

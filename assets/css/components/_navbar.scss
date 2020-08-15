@@ -1,0 +1,116 @@
+header {
+    height: 70px;
+
+    @include mobile {
+        height: 120px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    background: setColor(background);
+    height: 70px;
+    width: 100%;
+    color: setColor(color);
+    z-index: 99 !important;
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.4));
+
+    .menu-btn {
+        font-size: 28px;
+        margin: 0px 20px 0px 10px;
+
+        @include mobile {
+            position: absolute;
+            right: 20px;
+        }
+
+        @include android {
+            right: 10px;
+        }
+    }
+
+    .search-bar {
+        background: setColor(primary);
+        padding: 10px;
+        margin: 0px 10px 0px 20px;
+        border-radius: 5px;
+
+        @include tablet {
+            display: none;
+        }
+
+        input {
+            width: 500px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: setColor(color);
+
+            @include laptop {
+                width: 350px;
+            }
+
+            &::placeholder {
+                color: #ffffff80;
+            }
+        }
+    }
+
+    .actions {
+        background: setColor(primary);
+        height: 100%;
+        position: absolute;
+        right: 0;
+
+        align-items: center;
+
+        @include mobile {
+            height: 50px;
+            top: 70px;
+            left: 0;
+            right: 0;
+
+            justify-content: center;
+        }
+
+        .nav-link {
+            color: setColor(color);
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            transition: .3s ease-out;
+
+            &:hover {
+                color: setColor(background-2);
+            }
+
+            @include mobile {
+                margin: auto 10px;
+            }
+
+            @include android {
+                margin: 0px;
+            }
+
+            span {
+                font-size: 14px;
+                margin: 0px 5px 0px 5px;
+
+                @include mobile {
+                    display: none;
+                }
+            }
+
+            .sm {
+                display: block !important;
+            }
+        }
+
+        .search {
+            @include tablet {
+                display: block !important;
+            }
+        }
+    }
+}

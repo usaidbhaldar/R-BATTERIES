@@ -1,0 +1,65 @@
+.glider-contain {
+
+    .review {
+        margin: 20px auto;
+        width: 300px !important;
+
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile() {
+            width: 260px !important;
+        }
+
+        .user-name {
+            text-align: center;
+            margin-top: 10px;
+            color: setColor(background);
+
+            h1 {
+                font-size: 1.6rem;
+                margin: 20px auto;
+            }
+        }
+
+        .user-quote {
+            background: setColor(primary);
+            color: setColor(color);
+            font-size: 18px;
+            text-align: center;
+            border-radius: 10px;
+            height: 150px;
+
+            margin: 10px 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .fa-quote-left {
+                color: setColor(background);
+                position: absolute;
+                top: -12px;
+                left: 0;
+                font-size: 2em;
+            }
+        }
+    }
+
+    .glider-dots{
+
+        .glider-dot {
+            outline: none;
+        }
+        
+        .glider-dot.active {
+            background: setColor(background) !important;
+        }
+    }
+}

@@ -1,3 +1,31 @@
+/**
+*   Author: Zahid Shaikh
+*   Theme: R BATTERIES
+*   Date: 10-08-2020
+*/
+.label-wrapper {
+  position: relative;
+  left: -20px;
+  top: -14px;
+  color: white;
+  font-size: 20px;
+  padding: 0px 0px 0px 10px;
+  font-weight: 600;
+}
+
+.label-wrapper .wrapper {
+  position: absolute;
+  left: -23px;
+  top: -19px;
+  z-index: -1;
+}
+
+.categories, .battery-finder, .manufacturers, .feedback, .blogs {
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
+}
+
 /*CSS FOR NAVBAR*/
 header {
   height: 70px;
@@ -11,11 +39,11 @@ header {
 
 .navbar {
   position: fixed;
-  background: #40514E;
+  background: #FF3232;
   height: 70px;
   width: 100%;
   color: #F5F5F5;
-  z-index: 9;
+  z-index: 99 !important;
   filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.4));
 }
 
@@ -38,7 +66,7 @@ header {
 }
 
 .navbar .search-bar {
-  background: #35403E;
+  background: #FF6868;
   padding: 10px;
   margin: 0px 10px 0px 20px;
   border-radius: 5px;
@@ -64,8 +92,12 @@ header {
   }
 }
 
+.navbar .search-bar input::placeholder {
+  color: #ffffff80;
+}
+
 .navbar .actions {
-  background: #35403E;
+  background: #FF6868;
   height: 100%;
   position: absolute;
   right: 0;
@@ -87,6 +119,11 @@ header {
   font-size: 24px;
   display: flex;
   align-items: center;
+  transition: .3s ease-out;
+}
+
+.navbar .actions .nav-link:hover {
+  color: #3affe5;
 }
 
 @media (max-width: 680px) {
@@ -124,8 +161,8 @@ header {
 
 /*CSS for carousel */
 .carousel-container {
-  height: 300px;
-  background: #35403E;
+  height: 350px;
+  background: #FF6868;
   color: #F5F5F5;
   margin: 40px auto;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
@@ -141,86 +178,235 @@ header {
 }
 
 /*CSS for Categories*/
-.label-wrapper {
-  position: relative;
-  left: -20px;
-  top: -14px;
-  color: white;
-  font-size: 20px;
-  padding: 0px 0px 0px 10px;
-  font-weight: 600;
-}
-
-.label-wrapper .wrapper {
-  position: absolute;
-  left: -23px;
-  top: -19px;
-  z-index: -1;
-}
-
-.categories {
-  padding: 25px;
-  margin-bottom: 40px;
-  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
-}
-
-.categories .category {
-  height: 350px;
-  width: 280px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  transition: .3s ease-out;
-}
-
-@media (max-width: 1030px) {
-  .categories .category {
-    margin: auto;
-    margin-top: 20px;
+@media (max-width: 680px) {
+  .categories .col-sm-6 {
+    width: 100%;
   }
 }
 
-.categories .category .category-image {
-  height: calc(100% - 130px);
+.categories .category {
+  z-index: 9;
+  height: 400px;
+  width: 285px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.308);
+  overflow: hidden;
+  position: relative;
+  color: white;
+  margin: 20px auto;
 }
 
-.categories .category .category-image img {
+.categories .category img {
   width: 100%;
+  z-index: 7;
+  margin-bottom: 50px;
+}
+
+.categories .category .category-title, .categories .category .category-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.categories .category .category-title {
+  clip-path: polygon(0 0, 100% 0, 100% 27%, 0 51%);
+  background: #FF3232;
+  padding-top: 30px;
+  z-index: -1;
+}
+
+.categories .category .category-title h1 {
+  font-size: 20px;
+}
+
+.categories .category .category-image {
+  z-index: 8;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .categories .category .category-desc {
-  background: #35403E;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  clip-path: polygon(0 72%, 100% 46%, 100% 100%, 0% 100%);
+  background: #FF3232;
+}
+
+.categories .category .category-desc p {
+  width: 100%;
   position: absolute;
-  bottom: 0;
-  padding: 10px;
-  color: white;
-  border-radius: 10px;
+  bottom: 50px;
+  text-align: center;
 }
 
-.categories .category .category-desc .button-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.categories .category .category-desc .button-container button {
+.categories .category .category-desc button {
+  margin-bottom: 15px;
+  height: 40px;
   border: none;
   outline: none;
-  border-radius: 3px;
-  background: #3affe5;
-  color: #40514E;
-  font-weight: 700;
-  width: 46%;
-  padding: 3px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  color: white;
+  background: #FF6868;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.247);
   transition: .3s ease-out;
 }
 
-.categories .category .category-desc .button-container button:hover {
-  background: #40514E;
-  color: #3affe5;
+.categories .category .category-desc button:hover {
+  background: #F5F5F5;
+  color: #FF3232;
 }
 
-.categories .category:hover {
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+/*CSS for Battery Finder*/
+.input-field {
+  height: 40px;
+  width: 280px;
+  margin: 20px auto !important;
+}
+
+.input-field input {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.308);
+}
+
+.battery-finder {
+  position: relative;
+  overflow: hidden;
+}
+
+.battery-finder .background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  clip-path: circle(37.7% at 91% 100%);
+  background: #FF3232;
+  height: 100%;
+}
+
+@media (max-width: 680px) {
+  .battery-finder .background {
+    clip-path: circle(70.9% at 22% 100%);
+  }
+}
+
+.battery-finder button {
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.308);
+  background: #FF6868;
+  color: white;
+  font-weight: 600;
+  transition: .3s ease-out;
+  margin: 20px auto;
+}
+
+.battery-finder button:hover {
+  background: #F5F5F5;
+  color: #FF3232;
+}
+
+/*CSS for manufacturers*/
+.manufacturers .make {
+  height: 200px;
+  width: 200px;
+  background: #FF6868;
+  margin: 20px auto;
+}
+
+/*CSS for reviews*/
+.glider-contain .review {
+  margin: 20px auto;
+  width: 300px !important;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  .glider-contain .review {
+    width: 260px !important;
+  }
+}
+
+.glider-contain .review .user-name {
+  text-align: center;
+  margin-top: 10px;
+  color: #FF3232;
+}
+
+.glider-contain .review .user-name h1 {
+  font-size: 1.6rem;
+  margin: 20px auto;
+}
+
+.glider-contain .review .user-quote {
+  background: #FF6868;
+  color: #F5F5F5;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+  height: 150px;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.glider-contain .review .user-quote .fa-quote-left {
+  color: #FF3232;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  font-size: 2em;
+}
+
+.glider-contain .glider-dots .glider-dot {
+  outline: none;
+}
+
+.glider-contain .glider-dots .glider-dot.active {
+  background: #FF3232 !important;
+}
+
+/*CSS for blogs*/
+.blogs-glider .blog {
+  border-radius: 20px;
+  box-shadow: 0px 0px 14px #0000002f;
+  width: 280px !important;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.blogs-glider .blog .blog-img {
+  background: #FF6868;
+  width: 100%;
+  height: 200px;
+}
+
+.blogs-glider .blog .blog-heading {
+  padding: 10px;
+}
+
+.blogs-glider .blog .blog-heading h1 {
+  font-size: 1.3rem;
 }

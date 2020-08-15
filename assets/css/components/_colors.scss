@@ -1,0 +1,10 @@
+$colors: (
+    background: #FF3232,
+    primary: #FF6868,
+    color: #F5F5F5,
+    background-2: #3affe5
+);
+
+@function setColor($color-name) {
+    @return map-get($colors, $color-name);
+}
