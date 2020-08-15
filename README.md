@@ -18,6 +18,6 @@
     - UPS Batteries
 ```
 
-> Link to our website __[www.rbatteries.com](https://the-lone-druid.github.io/R-BATTERIES "R BATTERIES OFFICIAL WEBSITE")__
+> **Link to our website** __[www.rbatteries.com](https://the-lone-druid.github.io/R-BATTERIES "R BATTERIES OFFICIAL WEBSITE")__
 
 **Note: This website is under development**
