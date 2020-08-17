@@ -1,0 +1,60 @@
+.site-footer {
+    background: setColor(background);
+    padding: 10px;
+    color: setColor(color);
+
+    a {
+        color: setColor(color);
+        text-decoration: none;
+    }
+
+    .footer-links {
+        list-style-type: none;
+        margin: 0; padding: 0;
+
+        li {
+            padding: 3px;
+            font-weight: 400;
+
+        }
+
+        a:hover {
+            color: rgb(207, 207, 207);
+        }
+    }
+
+    .social-icons {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin: 10px auto;
+        padding: 0;
+
+        .nav-link {
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            font-size: 28px;
+            padding: 0;
+            margin: auto 10px;
+            transition: .3s ease-out;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 14px #00000080;
+
+            &:hover {
+                background: setColor(color);
+                color: setColor(background);
+            }
+        }
+    }
+
+    .company {
+        &:hover {
+            color: #d1d1d1;
+        }
+    }
+}
