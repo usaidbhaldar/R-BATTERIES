@@ -1,5 +1,6 @@
 $laptop: 1175px;
 $tablet: 1030px;
+$smallTablet: 875px;
 $mobile: 680px;
 $android: 360px;
 
@@ -11,6 +12,12 @@ $android: 360px;
 
 @mixin tablet {
     @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin smallTablet {
+    @media (max-width: #{$smallTablet}) {
         @content;
     }
 }

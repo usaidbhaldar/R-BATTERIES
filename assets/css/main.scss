@@ -4,7 +4,6 @@
 *   Date: 10-08-2020
 */
 
-@import'components/global';
 //Colors Scss
 @import'components/colors';
 //Media query scss
@@ -23,5 +22,9 @@
 @import'components/reviews';
 /*CSS for blogs*/
 @import'components/blogs';
+/*CSS for shop with us*/
+@import'components/shop-with-us';
 /*CSS for footer*/
 @import'components/footer';
+//Global Scss
+@import'components/global';

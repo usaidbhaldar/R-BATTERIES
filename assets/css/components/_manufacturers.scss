@@ -1,10 +1,13 @@
-.manufacturers {
-    
-    .make {
+.shop-by-make {
+
+    .input-field {
+        width: 300px !important;
+    }
+
+    .car-make {
         height: 200px;
         width: 200px;
-        background: setColor(primary);
-        margin: 20px auto;
-
+        background: setColor(lightPrimary);
+        margin: 30px auto;
     }
 }

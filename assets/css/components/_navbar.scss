@@ -1,115 +1,118 @@
 header {
     height: 70px;
 
-    @include mobile {
+    @include smallTablet {
         height: 120px;
     }
 }
 
-.navbar {
+nav {
+    max-width: 1366px;
+    background: setColor(primary);
     position: fixed;
-    background: setColor(background);
+    top: 0;
     height: 70px;
-    width: 100%;
-    color: setColor(color);
-    z-index: 99 !important;
-    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.4));
+    margin: 0px auto;
 
-    .menu-btn {
-        font-size: 28px;
-        margin: 0px 20px 0px 10px;
+    box-shadow: 0px 4px 10px #00000080;
 
-        @include mobile {
-            position: absolute;
-            right: 20px;
-        }
-
-        @include android {
-            right: 10px;
-        }
+    @include smallTablet {
+        box-shadow: none;
     }
 
-    .search-bar {
-        background: setColor(primary);
-        padding: 10px;
-        margin: 0px 10px 0px 20px;
-        border-radius: 5px;
 
-        @include tablet {
+    //CSS for search bar
+    .search-bar {
+        height: 45px;
+        width: calc(100% - 800px);
+        background: setColor(secondary);
+        border-radius: 5px;
+        color: setColor(lightPrimary);
+        position: relative;
+
+        @include mobile {
             display: none;
         }
 
+        .search-btn {
+            position: absolute;
+            left: 20px;
+            font-size: 20px;
+        }
+
         input {
-            width: 500px;
             background: transparent;
+            color: white;
             border: none;
             outline: none;
-            color: setColor(color);
+            font-size: 20px;
+            width: calc(100% - 110px);
+        }
 
-            @include laptop {
-                width: 350px;
+        input::placeholder {
+            color: setColor(lightPrimary);
+        }
+    }
+
+
+    //CSS for sub navbar
+    .sub-nav {
+        padding: 10px !important;
+        background: setColor(secondary);
+        height: 100%;
+        position: absolute;
+        right: 0;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+
+        list-style-type: none;
+
+        
+        .nav-link {
+            color: white;
+            transition: .3s ease-out;
+            border-radius: 100px;
+            margin: auto 5px;
+            
+            &:hover {
+                background: setColor(primary);
             }
+        }
+        
+        @include smallTablet {
+            top: 70px !important;
+            height: 50px;
+            left: 0;
+            border-radius: 0px;
+            box-shadow: 0px 4px 10px #00000080;
+            
+            @include mobile {
 
-            &::placeholder {
-                color: #ffffff80;
+                .nav-link {
+                    display: flex;
+                    align-content: center;
+                    margin: auto 3px;
+
+                    i {
+                        float: none !important;
+                        font-size: 28px;
+                    }
+                    span {
+                        display: none;
+                    }
+                }
             }
         }
     }
 
-    .actions {
-        background: setColor(primary);
-        height: 100%;
-        position: absolute;
-        right: 0;
+    .menu-btn {
+        @include smallTablet {
+            position: absolute;
+            right: 20px;
+            top: 10px;
 
-        align-items: center;
-
-        @include mobile {
-            height: 50px;
-            top: 70px;
-            left: 0;
-            right: 0;
-
-            justify-content: center;
-        }
-
-        .nav-link {
-            color: setColor(color);
-            font-size: 24px;
-
-            display: flex;
-            align-items: center;
-            transition: .3s ease-out;
-
-            &:hover {
-                color: setColor(background-2);
-            }
-
-            @include mobile {
-                margin: auto 10px;
-            }
-
-            @include android {
-                margin: 0px;
-            }
-
-            span {
-                font-size: 14px;
-                margin: 0px 5px 0px 5px;
-
-                @include mobile {
-                    display: none;
-                }
-            }
-
-            .sm {
-                display: block !important;
-            }
-        }
-
-        .search {
-            @include tablet {
-                display: block !important;
+            i {
+                margin: 0px !important;
             }
         }
     }
