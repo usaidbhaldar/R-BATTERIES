@@ -1,5 +1,5 @@
 
-# ![R BATTERIES LOGO](assets/img/logo2.svg)
+# ![R BATTERIES LOGO](assets/img/svg/logo2.svg)
 *An Online battery store where you can buy your car/ bike inverter batteries from the comfort of your home*
 
 ``` 
