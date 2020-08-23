@@ -14,11 +14,19 @@
         @include tablet() {
             height: 200px;
         }
+
+        @include android() {
+            height: 150px;
+        }
     }
 
     @include tablet() {
         width: 100% !important;
         border-radius: 0px;
         height: 200px;
+    }
+
+    @include android() {
+        height: 150px;
     }
 }
