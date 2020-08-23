@@ -8,6 +8,10 @@
         margin: 30px auto;
         overflow: hidden;
 
+        @include smallTablet() {
+            width: 300px !important; 
+        }
+
         .blog-image {
             height: 200px;
             width: 100%;

@@ -1,9 +1,9 @@
 
 # ![R BATTERIES LOGO](assets/img/svg/logo2.svg)
-*An Online battery store where you can buy your car/ bike inverter batteries from the comfort of your home*
+> *An Online battery store where you can buy your car/ bike inverter batteries from the comfort of your home*
 
 ``` 
-    What you can buy
+    Products that you can buy from our store ->
 
     - Car Batteries
 
